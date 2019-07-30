@@ -1,4 +1,6 @@
 """
+    www.johninvirtual.com
+    
     I am learning to use python scripting in blender
     and these codes are beginner stuffs
     
