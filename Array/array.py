@@ -8,7 +8,7 @@
     based on user input
     
     This creates separate cube objects
-    not a single object with many cubes,
+    not an instance of cubes,
     so make sure that you have more memory to
     play with high numbers
     
