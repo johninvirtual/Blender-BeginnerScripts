@@ -1,8 +1,8 @@
 import bpy  # this module is blender specific
-import openpyxl  # importing openpyxl -- can be installed via pip
+import openpyxl  # importing openpyxl -- can be installed via pip -- should be installed for this code to work
 
 # loading the workbook
-wb = openpyxl.load_workbook(filename = r"E:\BigProjects\Blender\XL\data.xlsx")
+wb = openpyxl.load_workbook(filename = r"your_xlsx_filepath_here")  # make sure to add your xlsx file path here
 sheet = wb["Sheet1"]
 
 # makeTitle function
