@@ -10,13 +10,13 @@ def make_title(title, mesh, size):
     """
     This function creates a Title block on every cube object
     """
-    txt = title.value  # title value is extracted from colomn 1
+    txt = title.value  # title value is extracted from column 1
     x = mesh[i].location.x  # getting x location of the cube
     y = mesh[i].location.y  # getting y location of the cube
     z = mesh[i].location.z  # getting z location of the cube
     bpy.ops.object.text_add(radius=.7*size, rotation=(1.5708,0,1.5708),location=(x,y-size,z+size))  # adding text
     ob=bpy.context.object
-    ob.data.body = txt  # setting text to value from colomn 1
+    ob.data.body = txt  # setting text to value from column 1
 
 
 mesh=[]  # initializing a list to store mesh data
@@ -27,9 +27,9 @@ i=0  # initializing i to access mesh data
 
 
 for row in range(1,sheet.max_row+1):
-    title = sheet.cell(row,1)  # accessing the value in colomn 1
-    cell = sheet.cell(row,2)  # accessing the value in colomn 2
-    bpy.ops.mesh.primitive_cube_add(size=int(cell.value), location=(0,gap,0))  # creating cube based on value in colomn 2
+    title = sheet.cell(row,1)  # accessing the value in column 1
+    cell = sheet.cell(row,2)  # accessing the value in column 2
+    bpy.ops.mesh.primitive_cube_add(size=int(cell.value), location=(0,gap,0))  # creating cube based on value in column 2
     mesh.append(bpy.data.objects["Cube"+name_ext])  # storing mesh data in mesh list
     make_title(title, mesh, cell.value)  # calling makeTitle function 
     i+=1  # incrementing i for next mesh data
