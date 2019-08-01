@@ -1,2 +1,2 @@
-This is script written for blender and only works there
+This script is written for blender and only works there
 
